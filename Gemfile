@@ -5,11 +5,16 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', '1.3.4', :group => :development
+
 
 group :production do
   # gems specifically for Heroku go here
   gem "pg"
+end
+
+group :development do
+  gem 'rspec-rails'
 end
 
 # Gems used only for assets and not required
@@ -31,12 +36,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :development do
-  gem 'rspec-rails'
-end
-
 group :test do
-  gem 'rspec-rails'
-  gem 'webrat'
+  # Pretty printed test output
+  gem 'turn', :require => false
 end
-
