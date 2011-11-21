@@ -27,6 +27,10 @@ RSpec.configure do |config|
 
   # Webrat configuration
   Webrat.configure do |config|
-  config.mode = :rails
+    config.mode = :rails
+  end
+
+  def test_sign_in(user)
+    controller.sign_in(user)
   end
 end
