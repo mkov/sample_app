@@ -6,6 +6,7 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3', '1.3.4', :group => :development
+gem 'will_paginate', '3.0.1'
 gem 'gravatar_image_tag', '1.0.0'
 
 
@@ -16,6 +17,8 @@ end
 
 group :development do
   gem 'rspec-rails'
+  gem 'annotate', '2.4.0'
+  gem 'faker', '1.0.1'
 end
 
 # Gems used only for assets and not required
